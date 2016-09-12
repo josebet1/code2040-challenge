@@ -1,6 +1,6 @@
 const request = require('request');
 
-const authToken = '<authToken>';
+const authToken = process.env.authToken;
 
 function returnIndex(index) {
   request.post({

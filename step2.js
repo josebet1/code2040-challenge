@@ -1,6 +1,6 @@
 const request = require('request');
 
-const authToken = '<authToken>';
+const authToken = process.env.authToken;
 
 function reverse(str) {
   return str.split('').reverse().join('');
