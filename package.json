@@ -1,8 +1,8 @@
 {
   "name": "code2040-challenge",
   "version": "1.0.0",
-  "description": "2017 Code2040 API Challenge",
-  "main": "index.js",
+  "description": "2016 Code2040 API Challenge",
+  "main": "step2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/josebet1/code2040-challenge.git"
   },
   "author": "Jose Bethancourt <jose@joseb.me>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/josebet1/code2040-challenge/issues"
   },
