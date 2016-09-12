@@ -2,6 +2,10 @@ const request = require('request');
 
 const authToken = process.env.authToken;
 
+/**
+ * returnIndex() returns the index found
+ * back to Code2040's API
+ */
 function returnIndex(index) {
   request.post({
     uri: 'http://challenge.code2040.org/api/haystack/validate',
@@ -14,6 +18,10 @@ function returnIndex(index) {
     });
 }
 
+/**
+ * findIndex() returns the index
+ * based on the needle, and haystack input
+ */
 function findIndex(needle, haystack) {
   const len = haystack.length;
   let index;
@@ -27,6 +35,10 @@ function findIndex(needle, haystack) {
   }
 }
 
+/**
+ * Fetches the needle and the haystack from Code2040
+ * passes the objects to findIndex()
+ */
 request.post({
   uri: 'http://challenge.code2040.org/api/haystack',
   method: 'POST',

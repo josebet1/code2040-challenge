@@ -2,6 +2,10 @@ const request = require('request');
 
 const authToken = process.env.authToken;
 
+/**
+ * returnTime() returns the new time
+ * back to Code2040's API
+ */
 function returnTime(timeString) {
   request.post({
     uri: 'http://challenge.code2040.org/api/dating/validate',
@@ -14,6 +18,14 @@ function returnTime(timeString) {
     });
 }
 
+/**
+ * Fetches the time and the seconds to add from Code2040
+ * It parses the time using new Date(), then it converts
+ * the interval to milisconds and adds it.
+ *
+ * Note: Code2040 doesn't expect ECMA-262 spec of ISO String
+ * so I had to change it up a bit to match their spec.
+ */
 request.post({
   uri: 'http://challenge.code2040.org/api/dating',
   method: 'POST',
